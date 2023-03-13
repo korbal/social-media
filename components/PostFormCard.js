@@ -1,13 +1,12 @@
 import Card from "./Card";
+import Avatar from "./Avatar";
 
 export default function PostFormCard() {
   return (
     <Card>
       <div className="flex gap-2">
         <div>
-          <div className="w-12 rounded-full overflow-hidden">
-            <img src="https://picsum.photos/200" />
-          </div>
+          <Avatar />
         </div>
         <textarea
           className="grow p-3 h-14"
