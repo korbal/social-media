@@ -1,14 +1,16 @@
 import Card from "./Card";
 
 export default function NavigationCard() {
+  const activeElement =
+    "flex gap-3 py-3 bg-socialBlue text-white -mx-10 px-10 rounded-md shadow-md shadow-gray-300 ";
+  const nonActiveElement =
+    "flex gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 -mx-4 px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300";
+
   return (
     <Card>
-      <div className="px-4 py-2">
+      <div className="px-4 py-2 ">
         <h2 className="text-gray-400 mb-3">Navigation</h2>
-        <a
-          href=""
-          className="flex gap-3 py-3 bg-socialBlue text-white -mx-10 px-10 rounded-md shadow-md shadow-gray-300 "
-        >
+        <a href="" className={activeElement}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,10 +27,7 @@ export default function NavigationCard() {
           </svg>
           Home
         </a>
-        <a
-          href=""
-          className="flex gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 -mx-4 px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300"
-        >
+        <a href="" className={nonActiveElement}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,10 +44,7 @@ export default function NavigationCard() {
           </svg>
           Friends
         </a>
-        <a
-          href=""
-          className="flex gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 -mx-4 px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300"
-        >
+        <a href="" className={nonActiveElement}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -65,10 +61,7 @@ export default function NavigationCard() {
           </svg>
           Saved Posts
         </a>
-        <a
-          href=""
-          className="flex gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 -mx-4 px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300"
-        >
+        <a href="" className={nonActiveElement}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -85,10 +78,7 @@ export default function NavigationCard() {
           </svg>
           Notifications
         </a>
-        <a
-          href=""
-          className="flex gap-3 py-2 my-2 hover:bg-blue-500 hover:bg-opacity-20 -mx-4 px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300"
-        >
+        <a href="" className={nonActiveElement}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
