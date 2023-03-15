@@ -1,7 +1,9 @@
-export default function Card({ children }) {
-  return (
-    <div className="bg-white shadow-md shadow-gray-300  rounded p-4 mb-5">
-      {children}
-    </div>
-  );
+export default function Card({ children, noPadding }) {
+  let classes =
+    "bg-white shadow-md shadow-gray-300 rounded mb-5 overflow-hidden";
+
+  if (!noPadding) {
+    classes += " p-4";
+  }
+  return <div className={classes}>{children}</div>;
 }
