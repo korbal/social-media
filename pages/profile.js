@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 export default function ProfilePage() {
   const router = useRouter();
-  const { pathname } = router;
+  const { asPath: pathname } = router;
   const isPosts = pathname.includes("posts") || pathname === "/profile";
   const isAbout = pathname.includes("about");
   const isFriends = pathname.includes("friends");
@@ -119,7 +119,30 @@ export default function ProfilePage() {
           </div>
         </div>
       </Card>
-      <PostCard />
+      {isPosts && (
+        <div>
+          <PostCard />
+        </div>
+      )}
+      {isAbout && (
+        <div>
+          <Card>
+            <h2 className="text-3xl b-2">About me</h2>
+            <p className="mb-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptates aliquid, saepe et cupiditate perspiciatis quibusdam
+              cum? Ipsa vel in quas quis adipisci, tempore perspiciatis itaque
+              earum consequuntur? Voluptates, assumenda nulla?
+            </p>
+            <p className="mb-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptates aliquid, saepe et cupiditate perspiciatis quibusdam
+              cum? Ipsa vel in quas quis adipisci, tempore perspiciatis itaque
+              earum consequuntur? Voluptates, assumenda nulla?
+            </p>
+          </Card>
+        </div>
+      )}
     </Layout>
   );
 }
