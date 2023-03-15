@@ -3,8 +3,19 @@ import Card from "../components/Card";
 import Avatar from "../components/Avatar";
 import Link from "next/link";
 import PostCard from "@/components/PostCard";
+import { useRouter } from "next/router";
 
 export default function ProfilePage() {
+  const router = useRouter();
+  const { pathname } = router;
+  const isPosts = pathname.includes("posts") || pathname === "/profile";
+  const isAbout = pathname.includes("about");
+  const isFriends = pathname.includes("friends");
+  const isPhotos = pathname.includes("photos");
+  const tabClasses =
+    "flex items-center px-4 py-1 gap-1 border-b-4 border-b-white";
+  const activeTabClasses =
+    "flex items-center px-4 py-1 gap-1 border-socialBlue border-b-4 text-socialBlue font-bold";
   return (
     <Layout>
       <Card noPadding={true}>
@@ -25,8 +36,8 @@ export default function ProfilePage() {
             </div>
             <div className="mt-10 flex gap-0">
               <Link
-                href={"/"}
-                className="flex items-center px-4 py-1 gap-1 border-socialBlue border-b-4 text-socialBlue font-bold"
+                href={"/profile/posts"}
+                className={isPosts ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +56,8 @@ export default function ProfilePage() {
                 Posts
               </Link>
               <Link
-                href={"/"}
-                className="flex items-center px-4 py-1 gap-1 border-b-4 border-b-white"
+                href={"/profile/about"}
+                className={isAbout ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +76,8 @@ export default function ProfilePage() {
                 About
               </Link>
               <Link
-                href={"/"}
-                className="flex items-center px-4 py-1 gap-1 border-b-4 border-b-white"
+                href={"/profile/friends"}
+                className={isFriends ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +96,8 @@ export default function ProfilePage() {
                 Friends
               </Link>
               <Link
-                href={"/"}
-                className="flex items-center px-4 py-1 gap-1 border-b-4 border-b-white"
+                href={"/profile/photos"}
+                className={isPhotos ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
