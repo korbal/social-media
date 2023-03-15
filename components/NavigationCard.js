@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NavigationCard() {
   const router = useRouter();
-  const { pathname } = router;
+  const { asPath: pathname } = router;
 
   const activeElementClasses =
     "flex gap-3 py-3 my-1 bg-socialBlue text-white -mx-10 px-10 rounded-md shadow-md shadow-gray-300 ";
@@ -37,7 +37,14 @@ export default function NavigationCard() {
           </svg>
           Home
         </Link>
-        <Link href="" className={nonactiveElementClasses}>
+        <Link
+          href="/profile/friends"
+          className={
+            pathname === "/profile/friends"
+              ? activeElementClasses
+              : nonactiveElementClasses
+          }
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

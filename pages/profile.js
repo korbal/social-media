@@ -4,6 +4,7 @@ import Avatar from "../components/Avatar";
 import Link from "next/link";
 import PostCard from "@/components/PostCard";
 import { useRouter } from "next/router";
+import FriendInfo from "@/components/FriendInfo";
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -140,6 +141,68 @@ export default function ProfilePage() {
               cum? Ipsa vel in quas quis adipisci, tempore perspiciatis itaque
               earum consequuntur? Voluptates, assumenda nulla?
             </p>
+          </Card>
+        </div>
+      )}
+      {isFriends && (
+        <div>
+          <Card>
+            <h2 className="text-3xl b-2">Friends</h2>
+            <div className="">
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
+      {isPhotos && (
+        <div>
+          <Card>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1598395927056-8d895e701c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                  alt=""
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1503152394-c571994fd383?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  alt=""
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1504512485720-7d83a16ee930?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1504&q=80"
+                  alt=""
+                />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img
+                  src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
           </Card>
         </div>
       )}
