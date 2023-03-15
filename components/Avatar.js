@@ -1,6 +1,10 @@
-export default function Avatar() {
+export default function Avatar({ size }) {
+  let width = "w-12";
+  if (size === "lg") {
+    width = "w-36";
+  }
   return (
-    <div className="w-12 rounded-full overflow-hidden">
+    <div className={`${width} rounded-full overflow-hidden`}>
       <img src="https://picsum.photos/200" />
     </div>
   );
