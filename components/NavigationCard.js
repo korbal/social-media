@@ -7,7 +7,7 @@ export default function NavigationCard() {
   const { asPath: pathname } = router;
 
   const activeElementClasses =
-    "flex md:gap-1 md:gap-3 py-3 my-1 bg-socialBlue text-white text-sm md:text-md md:-mx-8 px-6 md:px-8 rounded-md shadow-md shadow-gray-300 ";
+    "flex md:gap-1 md:gap-3 py-3 my-1 bg-socialBlue text-white text-sm md:text-md md:-mx-8 px-6 md:px-10 rounded-md shadow-md shadow-gray-300 ";
   const nonactiveElementClasses =
     "flex md:gap-1 md:gap-3 py-2 my-2 text-sm md:text-md hover:bg-blue-500 hover:bg-opacity-20 md:-mx-4 px-6 md:px-4 rounded-md transition-all hover:scale-110 hover:shadow-md shadow-gray-300";
 

@@ -6,6 +6,8 @@ export default function SavedPostsPage() {
       <h1 className="text-6xl mb-4 text-gray-300">Saved posts</h1>
       <PostCard />
       <PostCard />
+      <PostCard />
+      <PostCard />
     </Layout>
   );
 }

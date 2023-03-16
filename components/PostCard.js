@@ -258,7 +258,7 @@ export default function PostCard() {
         <div>
           <Avatar />
         </div>
-        <div className="border grow rounded-full relative">
+        <div className="border grow rounded-full ">
           <textarea
             className="block w-full p-3 overflow-hidden px-4 h-12 rounded-full"
             placeholder="Leave a comment..."
